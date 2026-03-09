@@ -49,11 +49,11 @@ type Lock struct {
 // connection back to the pool and clean up any held advisory locks.
 //
 // An error is returned if the connection cannot be obtained from the pool.
-func New(ctx context.Context, id int64, db *sql.DB) (lock Lock, err error) {
-	lock = Lock{id: id}
+func New(ctx context.Context, id int64, db *sql.DB) (lock *Lock, err error) {
+	lock = &Lock{id: id}
 
 	if lock.conn, err = db.Conn(ctx); err != nil {
-		return Lock{}, err
+		return nil, err
 	}
 
 	return lock, nil
