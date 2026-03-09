@@ -1,0 +1,23 @@
+services:
+  # Postgres
+  # Connection string: postgres://rotational:theeaglefliesatdawn@localhost:6544/testing?sslmode=disable
+  postgres:
+    image: postgres:18-alpine
+    ports:
+      - "127.0.0.1:6544:5432"
+    environment:
+      POSTGRES_USER: rotational
+      POSTGRES_PASSWORD: theeaglefliesatdawn
+      POSTGRES_DB: testing
+    volumes:
+      - pglockTestData:/var/lib/postgresql
+    healthcheck:
+      # Dependent services: mcp-toolbox
+      test: ["CMD-SHELL", "pg_isready -U rotational -d testing"]
+      start_period: 5s
+      timeout: 10s
+      interval: 20s
+      retries: 3
+
+volumes:
+  pglockTestData:

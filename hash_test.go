@@ -1,10 +1,9 @@
-package pglock_test
+package pglock
 
 import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"go.rtnl.ai/pglock"
 )
 
 func TestHash(t *testing.T) {
@@ -31,6 +30,6 @@ func TestHash(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		require.Equal(t, test.expected, pglock.Hash(test.input))
+		require.Equal(t, test.expected, Hash(test.input))
 	}
 }
