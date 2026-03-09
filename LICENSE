@@ -1,6 +1,11 @@
 MIT License
 
+Copyright (c) 2020 Allisson Azevedo
 Copyright (c) 2026 Rotational
+
+Work ported and adapted from github.com/allisson/go-pglock per the MIT license
+on that codebase, the original copyright notice is added along with the
+copyright notice for changes made under the same MIT license.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
