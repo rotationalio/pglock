@@ -26,8 +26,6 @@ func openDB(t *testing.T) *sql.DB {
 		return nil
 	}
 
-	t.Logf("using database URL: %s", dsn)
-
 	db, err := sql.Open("postgres", dsn)
 	require.NoError(t, err, "failed to open database connection")
 	require.NoError(t, db.Ping(), "failed to ping database")
