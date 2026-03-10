@@ -1,5 +1,9 @@
 # pglock
 
+[![CI Tests](https://github.com/rotationalio/pglock/actions/workflows/tests.yaml/badge.svg)](https://github.com/rotationalio/pglock/actions/workflows/tests.yaml)
+[![Go Report Card](https://goreportcard.com/badge/go.rtnl.ai/pglock)](https://goreportcard.com/report/go.rtnl.ai/pglock)
+[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/go.rtnl.ai/pglock)
+
 **Distributed locking using PostgreSQL session level advisory locks**
 
 This repo is a port and modification of [github.com/allisson/go-pglock](https://github.com/allisson/go-pglock) and per its MIT license, has a similar MIT license with the copyright included.
